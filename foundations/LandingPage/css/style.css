@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+	font-family: 'Roboto';
+}
+
+header,
+.welcome,
+footer {
+	background-color: #1F2937;
+	color: #F9FAF8;
+}
+
+header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 0;
+	width: 100%;
+	top: 0;
+}
+
+header>p {
+	font-size: 24px;
+}
+
+header>ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+}
+
+.welcome {
+	width: 100%;
+	height: 500px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.welcome>.text {
+	width: 500px;
+}
+
+.welcome>.text>p {
+	margin: 10px 0;
+}
+
+button {
+	background: #3882F6;
+	color: #F9FaF8;
+	border-radius: 7px;
+	width: 140px;
+	height: 40px;
+	font-weight: 800;
+	font-size: 18px;
+}
+
+#placeholder {
+	width: 500px;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: gray;
+
+}
+
+p.awesome {
+	font-size: 48px;
+	font-weight: 900;
+	color: #F9FAF8;
+}
+
+.random_info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 350px;
+}
+
+.random_info>p {
+	color: #1F2937;
+	font-size: 36px;
+	font-weight: 900;
+	width: 35%;
+	margin-left: 35%;
+}
+
+.all_infos {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 40px;
+}
+
+.info {
+	max-width: 150px;
+}
+
+.info>p {
+	text-align: center;
+}
+
+.info>img {
+	height: 150px;
+	width: 150px;
+	border-radius: 8px;
+	border: 4px #3882F6 solid;
+}
+
+.quote_section {
+	margin-top: 60px;
+	background: #E5E7EB;
+	font-size: 36px;
+	font-weight: 300;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.quote {
+	width: 53%;
+	margin: 0;
+	font-style: italic;
+}
+
+#thor {
+	font-weight: 700;
+	font-size: 25px;
+	margin-left: 450px;
+
+}
+
+.call_section {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.call_section>.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background: #3882F6;
+	width: 75%;
+	height: 150px;
+	color: #F9FAF8;
+	border-radius: 8px;
+}
+
+.call_section>.container>#text>p {
+	margin-top: -20px;
+	font-size: 20px;
+}
+
+.call_section>.container>button {
+	border: 3px #F9FAF8 solid;
+}
+
+footer {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 6px;
+	font-weight: 500;
+	font-size: 18px;
+}
