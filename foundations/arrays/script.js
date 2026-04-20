@@ -24,11 +24,11 @@
  */
 
 // let arr = [5, 3, 8, 1];
-
+//
 // function filterRange(array, a, b) {
 //   return array.filter((num) => (num >= a && num <= b))
 // }
-
+//
 // let filtered = filterRange(arr, 1, 4)
 // alert(filtered);
 // alert(arr);
@@ -53,7 +53,7 @@
 // function filterRangeInPlace(array, a, b) {
 //   for (let i = 0; i < array.length; i++) {
 //     let val = array[i];
-
+//
 //     if (val < a || val > b) {
 //       arr.splice(i, 1)
 //       i--;
@@ -67,7 +67,7 @@
 
 
 /*
-  Exercise #4
+  Exercise #4 
   Sort in decreasing order
 
   let arr = [5, 2, 1, -10, 8];
@@ -77,3 +77,65 @@
 
 // let arr = [5, 2, 1, -10, 8];
 // alert(arr.sort((a,b) => b - a));
+
+/*
+  Exercise #5
+  Copy and sort array
+
+  We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
+
+  Create a function copySorted(arr) that returns such a copy.
+
+  let arr = ["HTML", "JavaScript", "CSS"];
+
+  let sorted = copySorted(arr);
+
+  alert( sorted ); // CSS, HTML, JavaScript
+  alert( arr ); // HTML, JavaScript, CSS (no changes)
+*/
+
+
+/*
+  Exercise #6
+  Shuffle an array
+
+  Write the function shuffle(array) that shuffles (randomly reorders) elements of the array.
+
+  Multiple runs of shuffle may lead to different orders of elements. For instance:
+
+  let arr = [1, 2, 3];
+
+  shuffle(arr);
+  // arr = [3, 2, 1]
+
+  shuffle(arr);
+  // arr = [2, 1, 3]
+
+  shuffle(arr);
+  // arr = [3, 1, 2]
+  // ...
+
+  All element orders should have an equal probability.
+  For instance, [1,2,3] can be reordered as [1,2,3] or [1,3,2] or [3,1,2] etc, with equal probability of each case.
+*/
+
+
+/*
+  Exercise #7
+  Filter unique array members
+
+  Let arr be an array.
+
+  Create a function unique(arr) that should return an array with unique items of arr.
+
+  For instance:
+
+  function unique(arr) {
+  }
+
+  let strings = ["Hare", "Krishna", "Hare", "Krishna",
+    "Krishna", "Krishna", "Hare", "Hare", ":-O"
+  ];
+
+  alert( unique(strings) ); // Hare, Krishna, :-O
+*/
