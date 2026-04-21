@@ -6,13 +6,16 @@
 
  * */
 
-// words = "-webkit-transition"
-// function camelize(str) {
-//   return str.split('-')
-//     .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
-//     .join('')
-// }
-// console.log(camelize(words))
+function camelize(str) {
+    return str
+        .split("-")
+        .map((word, index) =>
+            index == 0 ? word : word[0].toUpperCase() + word.slice(1),
+        )
+        .join("");
+}
+words = "-webkit-transition";
+console.log(camelize(words));
 
 /*
    EXERCISE #2
@@ -23,17 +26,17 @@
   The function should not modify the array. It should return the new array.
  */
 
-// let arr = [5, 3, 8, 1];
-//
-// function filterRange(array, a, b) {
-//   return array.filter((num) => (num >= a && num <= b))
-// }
-//
-// let filtered = filterRange(arr, 1, 4)
-// alert(filtered);
-// alert(arr);
+let arr = [5, 3, 8, 1];
 
-/* 
+function filterRange(array, a, b) {
+    return array.filter((num) => num >= a && num <= b);
+}
+
+let filtered = filterRange(arr, 1, 4);
+alert(filtered);
+alert(arr);
+
+/*
   EXERCISE #3
 
   Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values
@@ -50,24 +53,23 @@
   alert( arr ); // [3, 1]
 */
 
-// function filterRangeInPlace(array, a, b) {
-//   for (let i = 0; i < array.length; i++) {
-//     let val = array[i];
-//
-//     if (val < a || val > b) {
-//       arr.splice(i, 1)
-//       i--;
-//     }
-//   }
-// }
+function filterRangeInPlace(array, a, b) {
+    for (let i = 0; i < array.length; i++) {
+        let val = array[i];
 
-// let arr = [5, 3, 8, 1];
-// filterRangeInPlace(arr, 1, 4);
-// alert(arr);
+        if (val < a || val > b) {
+            arr.splice(i, 1);
+            i--;
+        }
+    }
+}
 
+let arr = [5, 3, 8, 1];
+filterRangeInPlace(arr, 1, 4);
+alert(arr);
 
 /*
-  Exercise #4 
+  EXERCISE #4
   Sort in decreasing order
 
   let arr = [5, 2, 1, -10, 8];
@@ -75,11 +77,11 @@
 
 */
 
-// let arr = [5, 2, 1, -10, 8];
-// alert(arr.sort((a,b) => b - a));
+let arr = [5, 2, 1, -10, 8];
+alert(arr.sort((a, b) => b - a));
 
 /*
-  Exercise #5
+  EXERCISE #5
   Copy and sort array
 
   We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
@@ -94,9 +96,19 @@
   alert( arr ); // HTML, JavaScript, CSS (no changes)
 */
 
+// let arr = ["HTML", "JavaScript", "CSS"];
+
+// const copySorted = function(arr) {
+//   return arr.slice().sort();
+// }
+
+let sorted = copySorted(arr);
+
+alert(sorted); // CSS, HTML, JavaScript
+alert(arr); // HTML, JavaScript, CSS (no changes)
 
 /*
-  Exercise #6
+  EXERCISE #6
   Shuffle an array
 
   Write the function shuffle(array) that shuffles (randomly reorders) elements of the array.
@@ -118,10 +130,15 @@
   All element orders should have an equal probability.
   For instance, [1,2,3] can be reordered as [1,2,3] or [1,3,2] or [3,1,2] etc, with equal probability of each case.
 */
-
+function shuffle(arr) {
+    arr.sort(() => Math.random() - 0.5);
+}
+let array = [1, 2, 3, 4, 5];
+shuffle(array);
+alert(array);
 
 /*
-  Exercise #7
+  EXERCISE #7
   Filter unique array members
 
   Let arr be an array.
@@ -139,3 +156,27 @@
 
   alert( unique(strings) ); // Hare, Krishna, :-O
 */
+
+function unique(arr) {
+    let filteredArray = [];
+    for (str of arr) {
+        if (!filteredArray.includes(str)) {
+            filteredArray.push(str);
+        }
+    }
+    return filteredArray;
+}
+
+let strings = [
+    "Hare",
+    "Krishna",
+    "Hare",
+    "Krishna",
+    "Krishna",
+    "Krishna",
+    "Hare",
+    "Hare",
+    ":-O",
+];
+
+console.log(unique(strings));
